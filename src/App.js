@@ -1,8 +1,9 @@
 //importing useState, useEffect hooks and components
 import React, { useState, useEffect } from "react";
-import SearchBar from "./SearchBar";
-import TransactionForm from "./TransactionForm";
-import TransactionTable from "./TransactionTable";
+
+import SearchBar from "./components/SearchBar";
+import TransactionForm from "./components/TransactionForm";
+import TransactionTable from "./components/TransactionTable";
 
 //main component
 function App() {
