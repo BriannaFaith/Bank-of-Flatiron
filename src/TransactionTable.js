@@ -1,12 +1,16 @@
 import React from "react";
 
 function TransactionTable({ transactions = [], onDeleteTransaction, onSortTransactions }) {
-  // Assuming you have a state variable for sorting, you can use it in the sortedTransactions array
+
   const sortedTransactions = transactions;
 
   return (
     <table>
-      
+        <thead>Date</thead>
+        <thead>Description</thead>
+        <thead>Category</thead>
+        <thead>Amount</thead>
+
       <tbody>
         {sortedTransactions.map((transaction) => (
           <tr key={transaction.id}>
