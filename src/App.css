@@ -47,7 +47,6 @@ td {
 th {
   background-color: #007bff;
 }
-
 button {
   padding: 8px 12px;
   background-color: #007bff;
@@ -78,7 +77,6 @@ TransactionSearchFilter {
   margin-bottom: 20px;
 
 }
-
 TransactionSearchFilter input[type="text"] {
   border: 2px solid #007bff;
   border-radius: 4px;

@@ -60,7 +60,7 @@ function App() {
   const handleSortChange = () => {
     // Toggle the sorting order between 'asc' and 'desc'
     setSortOrder((prevOrder) => (prevOrder === "asc" ? "desc" : "asc"));
-    
+
   };
 // handling changes in the search term
   const handleFilterChange = (searchTerm) => {
@@ -76,6 +76,7 @@ function App() {
         <h2>Bank Transactions</h2>
         <button onClick={handleSortChange}>Sort Transactions</button>
         <TransactionTable transactions={sortTransactions(filterTransactions)} onDeleteTransaction={deleteTransaction} />
+      
         <TransactionForm onAddTransaction={addTransaction} />
       </div>
     </div>
