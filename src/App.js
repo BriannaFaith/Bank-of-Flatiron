@@ -60,6 +60,7 @@ function App() {
   const handleSortChange = () => {
     // Toggle the sorting order between 'asc' and 'desc'
     setSortOrder((prevOrder) => (prevOrder === "asc" ? "desc" : "asc"));
+    
   };
 // handling changes in the search term
   const handleFilterChange = (searchTerm) => {

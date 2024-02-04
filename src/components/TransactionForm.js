@@ -18,9 +18,6 @@ const TransactionForm = ({ onAddTransaction }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validate form fields, if needed
-
-    // Call the onAddTransaction function with the new transaction
     onAddTransaction(newTransaction);
 
     // Reset the form after adding the transaction

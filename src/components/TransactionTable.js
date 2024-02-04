@@ -6,7 +6,15 @@ function TransactionTable({ transactions = [], onDeleteTransaction, onSortTransa
 
   return (
     <table>
-
+      <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
 
     <tbody>
         {sortedTransactions.map((transaction) => (
