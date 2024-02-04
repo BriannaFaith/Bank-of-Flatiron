@@ -5,7 +5,7 @@ import TransactionTable from "./TransactionTable";
 
 function App() {
   const [transactions, setTransactions] = useState([]);
-  const [searchItem, setSearchItem] = useState([]);
+  const [searchItem, setSearchItem] = useState('');
   const [sortOrder, setSortOrder] = useState("asc"); // Default sorting order
 
   useEffect(() => {
@@ -13,9 +13,11 @@ function App() {
   }, []);
 
   const fetchTransactions = () => {
+    console.log('Fetching transactions...')
     fetch("http://localhost:3000/transactions")
       .then((response) => response.json())
       .then((data) => {
+        console.log('Fetched transactions:' , data)
         setTransactions(data);
       })
       .catch((error) => {
@@ -54,8 +56,8 @@ function App() {
     setSortOrder((prevOrder) => (prevOrder === "asc" ? "desc" : "asc"));
   };
 
-  const handleFilterChange = (searchItem) => {
-    setSearchItem(searchItem);
+  const handleFilterChange = (searchTerm) => {
+    setSearchItem(searchTerm);
   };
 
   return (
