@@ -1,4 +1,5 @@
 import React, {useState,useEffect} from "react";
+import SearchBar from "./SearchBar";
 
 
 function App() {
@@ -20,9 +21,24 @@ function App() {
       });
   };
 
+  const addTransaction =(newTransaction)=>{
+    newTransaction={ ...newTransaction, id:transactions.length +1 };
+    setTransactions([...transactions, newTransaction]);
+  };
+
+  const deleteTransaction= ()
+
+  const filterTransactions= transactions.filter(transaction =>transaction.description,toLowerCase())
+  const sortTransactions= (filterTransactions) =>{
+
+  }
   return(
     <div>
       <h1>BANK OF FLATIRON</h1>
+
+      <SearchBar />
+      <TransactionForm />
+      
     </div>
   )
 }
